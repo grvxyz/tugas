@@ -1,44 +1,158 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  background: #eaeaea;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  background: #333;
-  color: white;
+/* ===== CONTAINER (FRAME MOCKUP) ===== */
+.container {
+  width: 90%;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #000;
 }
 
-nav ul {
+/* ===== NAVBAR ===== */
+.navbar {
   display: flex;
-  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.navbar ul {
   list-style: none;
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+  padding: 0;
 }
 
-nav a {
-  color: white;
+.navbar a {
   text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  font-size: 14px;
 }
 
+/* ===== WELCOME ===== */
+.welcome {
+  padding: 20px;
+  min-height: 150px;
+  border-bottom: 1px solid #000;
+}
+
+/* ===== HEADQUARTER ===== */
+.headquarter {
+  padding: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.hq-list {
+  display: flex;
+  gap: 40px;
+}
+
+.hq-item {
+  text-align: center;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+/* ===== MESSAGE US ===== */
+.message {
+  padding: 20px;
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #000;
+}
+
+form label {
+  display: inline-block;
+  width: 120px;
+  font-size: 14px;
+}
+
+form input,
+form textarea {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+form textarea {
+  height: 80px;
+}
+
+button {
+  padding: 5px 15px;
+}
+
+.result {
+  border: 1px solid #000;
+  padding: 10px;
+  width: 300px;
+  white-space: pre-line;
+}
+
+/* ===== PROFILE PAGE ===== */
 .banner img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-bottom: 1px solid #000;
 }
 
-section {
+.about,
+.vision-mission {
   padding: 20px;
+  border-bottom: 1px solid #000;
 }
 
-/* RESPONSIVE */
+/* ===== FOOTER ===== */
+footer {
+  text-align: right;
+  padding: 10px;
+  font-size: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  nav ul {
+  .navbar ul {
     flex-direction: column;
   }
 
-  .banner img {
-    height: 180px;
+  .hq-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message {
+    flex-direction: column;
+  }
+
+  .result {
+    width: 100%;
   }
 }

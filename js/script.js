@@ -2,15 +2,15 @@
 const nameInput = document.getElementById("name");
 const welcomeText = document.getElementById("welcomeText");
 
-if (nameInput) {
+if (nameInput && welcomeText) {
   nameInput.addEventListener("input", () => {
-    welcomeText.innerText = nameInput.value
+    welcomeText.textContent = nameInput.value
       ? `Hi ${nameInput.value}, Welcome To Website`
       : "Hi, Welcome To Website";
   });
 }
 
-// Form Validation + Show Result
+// Form Validation & Show Result
 const form = document.getElementById("messageForm");
 const result = document.getElementById("result");
 
@@ -20,19 +20,20 @@ if (form) {
 
     const name = document.getElementById("name").value;
     const birth = document.getElementById("birth").value;
-    const gender = document.querySelector('input[name="gender"]:checked');
+    const gender = document.querySelector("input[name='gender']:checked");
     const message = document.getElementById("messageText").value;
 
     if (!name || !gender) {
-      alert("Please fill name and gender!");
+      alert("Nama dan Jenis Kelamin wajib diisi!");
       return;
     }
 
     result.innerHTML = `
-      <p><b>Name:</b> ${name}</p>
-      <p><b>Birth Date:</b> ${birth}</p>
-      <p><b>Gender:</b> ${gender.value}</p>
-      <p><b>Message:</b> ${message}</p>
+      <p><strong>Current Time:</strong> ${new Date()}</p>
+      <p><strong>Nama:</strong> ${name}</p>
+      <p><strong>Tanggal Lahir:</strong> ${birth}</p>
+      <p><strong>Jenis Kelamin:</strong> ${gender.value}</p>
+      <p><strong>Pesan:</strong> ${message}</p>
     `;
   });
 }

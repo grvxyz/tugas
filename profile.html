@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Profile</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
 
-<nav>
-  <div class="logo">🙂</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="profile.html">Our Profile</a></li>
-  </ul>
-</nav>
+  <!-- CONTAINER -->
+  <div class="max-w-6xl mx-auto bg-white shadow-md mt-6">
 
-<section class="banner">
-  <img src="assets/banner.jpg" alt="Company Banner">
-</section>
+    <!-- NAVBAR -->
+    <nav class="flex items-center justify-between px-6 py-4 border-b">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Logo" class="w-10 h-10 object-contain">
+        <span class="font-semibold text-lg">Our Company</span>
+      </div>
 
-<section class="about">
-  <h2>About The Company</h2>
-  <p>
-    We are a technology-driven company focusing on innovation, digital
-    transformation, and user-centered solutions.
-  </p>
-</section>
+      <a href="index.html"
+         class="border border-gray-300 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
+        Home
+      </a>
+    </nav>
 
-<section class="vision-mission">
-  <h2>Vision</h2>
-  <p>To become a leading digital solution provider.</p>
+    <!-- BANNER -->
+    <section class="relative">
+      <img
+        src="assets/banner.png"
+        alt="Company Banner"
+        class="w-full h-64 md:h-80 object-cover"
+      />
+      <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+        <h1 class="text-white text-3xl md:text-4xl font-bold">
+          Our Profile
+        </h1>
+      </div>
+    </section>
 
-  <h2>Mission</h2>
-  <ul>
-    <li>Deliver high quality products</li>
-    <li>Focus on user experience</li>
-    <li>Encourage innovation</li>
-  </ul>
-</section>
+    <!-- ABOUT -->
+    <section class="p-6 md:p-10 border-b">
+      <h2 class="text-xl font-semibold mb-3">About The Company</h2>
+      <p class="text-gray-700 leading-relaxed max-w-3xl">
+        We are a modern digital company focused on building responsive,
+        user-centered web applications. Our goal is to help businesses grow
+        through technology, design, and innovation.
+      </p>
+    </section>
 
-<script src="js/script.js"></script>
+    <!-- VISION & MISSION -->
+    <section class="p-6 md:p-10 grid md:grid-cols-2 gap-8">
+      <!-- Vision -->
+      <div>
+        <h2 class="text-xl font-semibold mb-3">Vision</h2>
+        <p class="text-gray-700 leading-relaxed">
+          To become a leading digital innovation company that delivers impactful
+          and sustainable technology solutions.
+        </p>
+      </div>
+
+      <!-- Mission -->
+      <div>
+        <h2 class="text-xl font-semibold mb-3">Mission</h2>
+        <ul class="list-disc ml-5 space-y-2 text-gray-700">
+          <li>Deliver high-quality digital products</li>
+          <li>Focus on user experience and accessibility</li>
+          <li>Encourage continuous innovation and learning</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
 </body>
 </html>

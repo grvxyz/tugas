@@ -1,44 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Home</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-<nav>
-  <div class="logo">🙂</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="profile.html">Our Profile</a></li>
-  </ul>
-</nav>
+<div class="max-w-6xl mx-auto bg-white border border-gray-300 mt-6">
 
-<section class="welcome">
-  <h1 id="welcomeText">Hi, Welcome To Website</h1>
-</section>
+  <!-- NAVBAR -->
+  <nav class="flex items-center justify-between px-6 py-4 border-b">
+    <div class="w-9 h-9 rounded-full bg-yellow-400 flex items-center justify-center font-bold">
+      <img src="assets/logo.png" alt="Logo" class="w-10 h-10 object-contain">
+    </div>
 
-<section class="message">
-  <h2>Message Us</h2>
+    <ul class="flex gap-4 text-sm">
+      <li><a href="index.html" class="border px-3 py-1">Home</a></li>
+      <li><a href="https://radsprofile.vercel.app/" class="border px-3 py-1">About Me</a></li>
+      <li><a href="profile.html" class="border px-3 py-1">Our Profile</a></li>
+      <li><a href="https://github.com/grvxyz" class="border px-3 py-1">Portfolio</a></li>
+      <li><a href="#message" class="border px-3 py-1">Message Us</a></li>
+    </ul>
+  </nav>
 
-  <form id="messageForm">
-    <input type="text" id="name" placeholder="Name" required>
-    <input type="date" id="birth">
-    
-    <label>
-      <input type="radio" name="gender" value="Male"> Male
-    </label>
-    <label>
-      <input type="radio" name="gender" value="Female"> Female
-    </label>
+  <!-- WELCOME -->
+  <section class="p-6 border-b">
+    <h1 id="welcomeText" class="text-2xl font-semibold">
+      Hi, Welcome To Website
+    </h1>
+    <p class="text-gray-600 mt-2">
+      Ini adalah website latihan pertama
+    </p>
+  </section>
 
-    <textarea id="messageText" placeholder="Message"></textarea>
-    <button type="submit">Submit</button>
-  </form>
+  <!-- HEADQUARTER -->
+  <section class="p-6 border-b">
+    <h2 class="font-semibold mb-4">Our Headquarter</h2>
 
-  <div id="result"></div>
-</section>
+    <div class="flex gap-12">
+      <div class="text-center">
+        <div class="w-20 h-20 border rounded-full mx-auto mb-2"></div>
+        Jakarta
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 border rounded-full mx-auto mb-2"></div>
+        Bandung
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 border rounded-full mx-auto mb-2"></div>
+        Surabaya
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE US -->
+  <section id="message" class="p-6 flex flex-col md:flex-row gap-10">
+    <div class="md:w-1/2">
+      <h2 class="font-semibold mb-4">Message Us</h2>
+
+      <form id="messageForm" class="space-y-3">
+        <div>
+          <label class="block text-sm">Nama</label>
+          <input id="name" type="text" class="border w-full px-2 py-1" />
+        </div>
+
+        <div>
+          <label class="block text-sm">Tanggal Lahir</label>
+          <input id="birth" type="date" class="border w-full px-2 py-1" />
+        </div>
+
+        <div>
+          <label class="block text-sm mb-1">Jenis Kelamin</label>
+          <label class="mr-3">
+            <input type="radio" name="gender" value="Laki-Laki" /> Laki-Laki
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Perempuan" /> Perempuan
+          </label>
+        </div>
+
+        <div>
+          <label class="block text-sm">Pesan</label>
+          <textarea id="messageText" class="border w-full px-2 py-1 h-20"></textarea>
+        </div>
+
+        <button class="border px-4 py-1">Submit</button>
+      </form>
+    </div>
+
+    <div id="result" class="md:w-1/2 border p-4 text-sm whitespace-pre-line">
+      Current time :
+    </div>
+  </section>
+
+  <footer class="text-right text-xs p-4 border-t">
+    Created By RevoU
+  </footer>
+
+</div>
 
 <script src="js/script.js"></script>
 </body>
