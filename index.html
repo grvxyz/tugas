@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">🙂</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="profile.html">Our Profile</a></li>
+  </ul>
+</nav>
+
+<section class="welcome">
+  <h1 id="welcomeText">Hi, Welcome To Website</h1>
+</section>
+
+<section class="message">
+  <h2>Message Us</h2>
+
+  <form id="messageForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="date" id="birth">
+    
+    <label>
+      <input type="radio" name="gender" value="Male"> Male
+    </label>
+    <label>
+      <input type="radio" name="gender" value="Female"> Female
+    </label>
+
+    <textarea id="messageText" placeholder="Message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result"></div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
